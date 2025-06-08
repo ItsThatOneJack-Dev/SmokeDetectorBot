@@ -28,9 +28,7 @@ async def on_message(message: discord.Message):
         return
 
     chance = random.randint(1, 100)
-    if chance == 1:
+    if chance in [1,2]:
         await message.author.send("Beep", view=get_view())
-    elif chance == 2:
-        await message.channel.send("Beep", view=get_view())
 
 bot.run("")
